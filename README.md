@@ -63,6 +63,13 @@ miku-theme/
 └── renderer/index.html      # 说明面板页面
 ```
 
+ ## ⚠️ 免责声明 / Disclaimer
+ 
+ 本项目中的壁纸及图片素材均来自网络，仅用于学习和个人美化用途，版权归原作者所有。
+ 如有侵权，请通过 [Issues](https://github.com/cainiao0502/pi-desktop-skin/issues) 联系我，我会第一时间删除相关内容。
+ 
+ All wallpapers and image assets in this project are collected from the Internet and are for learning and personal customization purposes only. Copyright belongs to the original authors. If any content infringes your rights, please open an issue and it will be removed immediately.
+ 
 ## 📄 License
 
 [MIT](LICENSE)
