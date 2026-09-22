@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; style-src 'unsafe-inline'; img-src data:;" />
+  <meta name="pi-plugin-chrome" content="v2" />
+  <title>Miku Theme</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: linear-gradient(165deg, #0b1420 0%, #0a121b 55%, #081018 100%);
+      color: #e9f5f3;
+      min-height: calc(100dvh - var(--pi-plugin-titlebar-height, 46px));
+      padding: 28px 26px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #39c5bb;
+      border: 1px solid rgba(57, 197, 187, 0.35);
+      border-radius: 999px;
+      padding: 3px 10px;
+      margin-bottom: 14px;
+    }
+    h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+    .sub { color: rgba(233, 245, 243, 0.6); font-size: 13px; margin-bottom: 24px; }
+    .card {
+      background: rgba(57, 197, 187, 0.05);
+      border: 1px solid rgba(57, 197, 187, 0.14);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      font-size: 14px;
+      color: #63d8cf;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .swatch { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+    .card p { font-size: 12.5px; line-height: 1.7; color: rgba(233, 245, 243, 0.72); }
+    .row { display: flex; gap: 6px; margin-top: 10px; }
+    .row .swatch { width: 22px; height: 22px; border-radius: 6px; }
+    .hint { font-size: 11.5px; color: rgba(233, 245, 243, 0.4); margin-top: 20px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <span class="badge">Hatsune Miku · 39</span>
+  <h1>Miku Theme</h1>
+  <p class="sub">为 PI-Desktop 打造的初音未来双主题</p>
+
+  <div class="card">
+    <h2><span class="swatch" style="background:#0e161f"></span>Cyber Diva（暗 · 已包含）</h2>
+    <p>深夜蓝黑基底 × 霓虹 Teal。侧栏一缕冷光，输入胶囊 hairline 辉光，代码块沉浸深色。</p>
+    <div class="row">
+      <span class="swatch" style="background:#39c5bb"></span>
+      <span class="swatch" style="background:#0e161f"></span>
+      <span class="swatch" style="background:#121d28"></span>
+      <span class="swatch" style="background:#ff6b85"></span>
+      <span class="swatch" style="background:#56c8e8"></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="swatch" style="background:#fbfdfd"></span>Snow Miku（亮 · 已包含）</h2>
+    <p>雪白 × 冰蓝 × 沉稳 Teal。清爽通透，白日办公不刺眼，点缀色只做轻轻一提。</p>
+    <div class="row">
+      <span class="swatch" style="background:#14a39a"></span>
+      <span class="swatch" style="background:#fbfdfd"></span>
+      <span class="swatch" style="background:#edf4f5"></span>
+      <span class="swatch" style="background:#e25563"></span>
+      <span class="swatch" style="background:#2a9cc9"></span>
+    </div>
+  </div>
+
+  <p class="hint">
+    启用方式：设置 → 外观 → 主题，选择「Cyber Diva（初音 · 暗）」或「Snow Miku（初音 · 亮）」。<br />
+    39 ♪
+  </p>
+</body>
+</html>

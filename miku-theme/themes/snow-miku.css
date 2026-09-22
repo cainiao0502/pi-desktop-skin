@@ -1,0 +1,413 @@
+/*
+  Snow Miku — 初音未来 · 亮色主题
+  壁纸色系：雪蓝灰 × Miku 青绿发色。
+  基底取壁纸雪空色偏绿，强调色为 Miku 青绿 #0F9D8E。
+  壁纸：themes/assets/wallpaper-light.webp（侧栏 + 全屏画布，白色渐变罩保可读）。
+*/
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  /* ── 基底层（壁纸雪空色） ───────────────────────── */
+  --ds-bg-under: #e8f2ee;
+  /* 主面板留 10% 透明度，让全屏画布上的壁纸隐约透出 */
+  --ds-bg-primary: #f3faf7;
+  --ds-settings-rail-bg: #e5f1ec;
+  --ds-bg-sidebar: #e5f1ec;
+  /* 侧栏壁纸：左侧白色罩保证导航文字可读，向右透出画面 */
+  --ds-bg-sidebar-image:
+    linear-gradient(97deg,
+      rgba(247, 253, 250, 0.94) 0%,
+      rgba(247, 253, 250, 0.68) 45%,
+      rgba(243, 250, 246, 0.3) 100%),
+     url("themes/assets/wallpaper-light.webp");
+  --ds-bg-secondary: #eff6f2;
+  --ds-bg-tertiary: #e9f2ee;
+  --ds-bg-inset: #e0efe9;
+  --ds-bg-dock: #f2f9f5;
+   --ds-bg-dock-raised: color-mix(in oklab, #ffffff 55%, transparent);
+  --ds-bg-elevated: color-mix(in oklab, #ffffff 72%, transparent);
+  --ds-bg-elevated-opaque: #ffffff;
+  --ds-bg-elevated-primary: color-mix(in oklab, #ffffff 72%, transparent);
+  --ds-bg-composer: #ffffff;
+
+  /* 交互层：冰蓝灰 */
+  --ds-bg-hover: color-mix(in oklab, #0f9d8e 6%, transparent);
+  --ds-bg-active: color-mix(in oklab, #0f9d8e 10%, transparent);
+  --ds-bg-chip: color-mix(in oklab, #0f9d8e 5%, transparent);
+
+  --ds-sidebar-glass-tint: color-mix(in oklab, #e5f1ec 55%, transparent);
+  --ds-sidebar-glass-sheen-top: color-mix(in oklab, #ffffff 46%, transparent);
+  --ds-sidebar-glass-sheen-bottom: color-mix(in oklab, #ffffff 30%, transparent);
+
+  /* ── 文字：深青墨 ──────────────────────────────── */
+  --ds-text-primary: #1a2e2a;
+  --ds-text-secondary: color-mix(in oklab, #1a2e2a 74%, transparent);
+   --ds-text-muted: #587a70;
+   --ds-text-tertiary: color-mix(in oklab, #1a2e2a 55%, transparent);
+  --ds-text-faint: #92aca4;
+  --ds-placeholder-ink: #64837a;
+  --ds-prose-kbd-fg: #2f4a42;
+
+  /* ── 结构线与色块 ──────────────────────────────── */
+   --ds-border-default: color-mix(in oklab, #1d7a68 9%, transparent);
+   --ds-border: var(--ds-border-default);
+  --ds-border-subtle: color-mix(in oklab, #1d7a68 5%, transparent);
+  --ds-border-strong: color-mix(in oklab, #1d7a68 14%, transparent);
+  --ds-tile: color-mix(in oklab, #1d7a68 3.5%, transparent);
+  --ds-tile-hover: color-mix(in oklab, #1d7a68 6%, transparent);
+  --ds-tile-deep: color-mix(in oklab, #1d7a68 9%, transparent);
+  --ds-tool-row-bg: color-mix(in oklab, #1d7a68 2.5%, transparent);
+  --ds-raised: #ffffff;
+  --ds-raised-shadow:
+    0 1px 2px rgba(16, 58, 48, 0.1),
+    0 0 0 0.5px rgba(16, 58, 48, 0.05);
+
+  /* ── 强调色：冰蓝青 ────────────────────────────── */
+  --ds-accent: #0b8074;
+  --ds-accent-hover: #096e63;
+  --ds-accent-soft: #3d9c90;
+   --ds-focus: #0b8074;
+   --ds-accent-foreground: #ffffff;
+
+  /* ── 设置页 / 输入域 ───────────────────────────── */
+  --ds-settings-field-bg: #ffffff;
+  --ds-settings-nav-active: color-mix(in oklab, #0f9d8e 10%, #ffffff);
+  --ds-field-inset-bg: #e9f2ee;
+  --ds-field-inset-focus-bg: #ffffff;
+
+  /* ── 开关 ──────────────────────────────────────── */
+  --ds-switch-track-off: color-mix(in oklab, #1d7a68 12%, transparent);
+  --ds-switch-track-off-hover: color-mix(in oklab, #1d7a68 20%, transparent);
+  --ds-switch-ring-off: color-mix(in oklab, #1d7a68 22%, transparent);
+  --ds-switch-knob-off: #ffffff;
+  --ds-switch-knob-on: #ffffff;
+
+  /* ── 代码块 ────────────────────────────────────── */
+  --ds-code-head-bg: color-mix(in oklab, #1d7a68 4%, transparent);
+  --ds-code-hover-bg: color-mix(in oklab, #1d7a68 7%, transparent);
+  --ds-thinking-code-bg: #e9f1f6;
+  --ds-mermaid-canvas: #ffffff;
+
+  /* ── 遮罩 ──────────────────────────────────────── */
+  --ds-scrim: color-mix(in oklab, #143a30 28%, transparent);
+  --ds-modal-veil: color-mix(in oklab, #143a30 32%, transparent);
+
+  /* ── 状态色 ────────────────────────────────────── */
+  --ds-success: #0fa878;
+  --ds-warning: #e08a1e;
+  --ds-error: #e25563;
+  --ds-info: #1d7a68;
+  --ds-purple: #8b5cf6;
+
+  /* 发送键禁用态 */
+  --ds-send-disabled-bg: #9cc6ba;
+  --ds-send-disabled-fg: #ffffff;
+
+  /* ── 阴影 ──────────────────────────────────────── */
+  --ds-shadow-dialog: 0 16px 48px rgba(16, 58, 48, 0.14);
+  --ds-elevation-stroke: 0 0 0 0.5px rgba(16, 58, 48, 0.1);
+  --ds-shadow-composer:
+    0 3px 8px rgba(16, 58, 48, 0.07),
+    0 0 24px rgba(15, 157, 142, 0.05);
+}
+
+/* ── 主题专属结构层 ─────────────────────────────────── */
+/* 中栏面板：单独承担透明度（bg-primary 保持实色供文字/组件引用） */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .main-pane {
+  background: color-mix(in oklab, #f3faf7 12%, transparent);
+}
+
+/* 全屏画布：壁纸 + 雪色罩（中栏透出隐约场景，文字依旧清爽） */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .app-scenic-backdrop {
+  background:
+    linear-gradient(180deg,
+      rgba(244, 251, 247, 0.4) 0%,
+      rgba(242, 250, 246, 0.44) 55%,
+      rgba(239, 248, 243, 0.48) 100%),
+     url("themes/assets/wallpaper-light.webp") center / cover no-repeat,
+    #f0f7f3;
+}
+
+/* 输入胶囊：冰蓝 hairline */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .composer-shell {
+  box-shadow:
+    0 0 0 1px rgba(15, 157, 142, 0.16),
+    0 8px 28px rgba(16, 58, 48, 0.08);
+}
+
+/* 文字选区 */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] ::selection {
+  background: rgba(15, 157, 142, 0.24);
+}
+
+/* 滚动条 */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] ::-webkit-scrollbar-thumb {
+  background: rgba(29, 122, 104, 0.16);
+}
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 122, 104, 0.3);
+}
+
+/* ── 细节打磨层 ─────────────────────────────────────── */
+
+/* 用户气泡：雪白玻璃 + 冰蓝染色 + 发丝描边 */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .message-row.user .message-bubble {
+  background:
+    linear-gradient(180deg, rgba(15, 157, 142, 0.07), rgba(15, 157, 142, 0.04)),
+    rgba(255, 255, 255, 0.62);
+  box-shadow: inset 0 0 0 1px rgba(15, 157, 142, 0.14);
+   backdrop-filter: blur(10px);
+ }
+ /* 代码块：玻璃做在 .code-block wrapper 上（实心底板在它身上，
+    内部 pre 被宿主强制透明）；--code-block-bg 一并覆盖 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat .code-block,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-content .code-block {
+   --code-block-bg: rgba(231, 245, 244, 0.44);
+   background: rgba(231, 245, 244, 0.44);
+   -webkit-backdrop-filter: blur(22px) saturate(1.2);
+   backdrop-filter: blur(22px) saturate(1.2);
+   box-shadow:
+     inset 0 0 0 1px rgba(11, 128, 116, 0.22),
+     0 8px 26px rgba(16, 58, 48, 0.12);
+ }
+
+ 
+ /* 代码块标题条：teal 染色 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat .code-block-head,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-content .code-block-head {
+   background: color-mix(in oklab, #0f9d8e 5%, transparent);
+   box-shadow: inset 0 -1px 0 rgba(15, 157, 142, 0.12);
+ }
+ 
+ /* 输入框聚焦：冰蓝描边加深 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .composer-shell:focus-within {
+  box-shadow:
+    0 0 0 1px rgba(15, 157, 142, 0.32),
+    0 8px 28px rgba(16, 58, 48, 0.1);
+}
+
+/* 会话顶栏：发丝底线 */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .conversation-topbar {
+  box-shadow: inset 0 -1px 0 rgba(29, 122, 104, 0.09);
+}
+
+/* 表格：雪白玻璃底板 + 青绿表头 */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat .table-wrap {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px rgba(13, 148, 160, 0.3);
+}
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat th {
+  background: color-mix(in oklab, #0f9d8e 7%, transparent);
+}
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat tbody tr:nth-child(even) td {
+  background: transparent;
+}
+
+/* 表格内网格线：行间发丝横线 + 列间竖向分隔（相框内格） */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat th,
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat td {
+  border-bottom: 1px solid rgba(13, 148, 160, 0.28);
+}
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat tbody tr:last-child td {
+  border-bottom: 0;
+}
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat th + th,
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat td + td {
+  border-left: 1px solid rgba(13, 148, 160, 0.22);
+}
+
+/* 设置页：外壳给一层 12% 混合，内部层全部放行，壁纸从整页透出 */
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .app-shell.settings-mode {
+  background: color-mix(in oklab, #f3faf7 12%, transparent);
+}
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .settings-shell,
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .settings-shell-full,
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .settings-content,
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .settings-content-inner,
+:root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .settings-titlebar {
+  background: transparent;
+ }
+ 
+ /* ── 聊天页放行清单 ─────────────────────────────────── */
+ /* 底部 dock：宿主默认实色，改成分层渐隐——上缘全透明无接缝，
+    向下渐浓托住输入胶囊，壁纸始终可见 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .composer-dock-docked {
+   background: linear-gradient(180deg,
+     rgba(247, 252, 249, 0) 0%,
+     rgba(247, 252, 249, 0.3) 34%,
+     rgba(247, 252, 249, 0.62) 100%);
+ }
+ 
+ /* 顶栏 / 标题栏：悬浮玻璃胶囊——青绿发丝描边 + 轻磨砂，
+    与窗口边缘留出呼吸感，壁纸从胶囊四周透出 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .conversation-topbar,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .main-titlebar {
+   top: 6px;
+   left: 12px;
+   height: calc(var(--ds-toolbar-height) - 12px);
+   border-radius: calc(var(--ds-toolbar-height) / 2);
+   background: linear-gradient(180deg,
+     rgba(255, 255, 255, 0.6) 0%,
+     rgba(250, 253, 251, 0.42) 100%);
+   border: 1px solid rgba(15, 157, 142, 0.35);
+   -webkit-backdrop-filter: blur(10px) saturate(1.08);
+   backdrop-filter: blur(10px) saturate(1.08);
+   box-shadow:
+     inset 0 1px 0 rgba(255, 255, 255, 0.5),
+     0 4px 14px rgba(16, 58, 48, 0.1);
+ }
+ 
+ /* 会话落定幕布：从设置页/其他会话切回时盖在对话上的过渡层，
+    宿主默认实色 bg-primary，会形成整片蒙版——改成和页面同浓度的混合色，
+    保留其遮未渲染内容的职责，但视觉上与页面融为一体 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .transcript-settle-veil {
+   background: color-mix(in oklab, #f3faf7 12%, transparent);
+ }
+ 
+ /* 顶栏胶囊向右延伸到窗缘，把窗口控制区包进同一个框；
+    ct-right 加大右内边距，让对话动作图标仍让开宿主固定的按钮区 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .app-shell .conversation-topbar,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .app-shell .main-titlebar {
+   right: 12px;
+ }
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .conversation-topbar .ct-right {
+   padding-right: 150px;
+ }
+ 
+ /* 窗口控制：默认无框透明，融入顶栏大胶囊（hover 底色由自身圆角裁切） */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .app-shell:not(.settings-mode) > .window-controls {
+   top: 6px;
+   right: 12px;
+   height: calc(var(--ds-toolbar-height) - 12px);
+   border-radius: calc(var(--ds-toolbar-height) / 2);
+   background: transparent;
+   border: none;
+   box-shadow: none;
+   -webkit-backdrop-filter: none;
+   backdrop-filter: none;
+   overflow: hidden;
+ }
+ 
+ /* 设置页没有顶栏胶囊，窗口控制保留独立玻璃胶囊 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .app-shell.settings-mode > .window-controls {
+   top: 6px;
+   right: 12px;
+   height: calc(var(--ds-toolbar-height) - 12px);
+   border-radius: calc(var(--ds-toolbar-height) / 2);
+   background: linear-gradient(180deg,
+     rgba(255, 255, 255, 0.6) 0%,
+     rgba(250, 253, 251, 0.42) 100%);
+   border: 1px solid rgba(15, 157, 142, 0.35);
+   -webkit-backdrop-filter: blur(10px) saturate(1.08);
+   backdrop-filter: blur(10px) saturate(1.08);
+   box-shadow:
+     inset 0 1px 0 rgba(255, 255, 255, 0.5),
+     0 4px 14px rgba(16, 58, 48, 0.1);
+   overflow: hidden;
+ }
+ /* 工作面板容器：掺一丝青绿（4%），壁纸色调和主题色系挂钩 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .work-panel {
+   background: color-mix(in oklab, color-mix(in oklab, #0f9d8e 4%, var(--ds-bg-dock)) 12%, transparent);
+   box-shadow: inset 1px 0 0 rgba(11, 128, 116, 0.16);
+ }
+ 
+ /* 顶带工具条：青绿染色 + 底缘发丝线 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .work-panel-header,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .file-viewer-header,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .work-browser-chrome,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .subagent-detail-hero {
+   background: color-mix(in oklab, #0f9d8e 6%, transparent);
+   box-shadow: inset 0 -1px 0 rgba(11, 128, 116, 0.18);
+ }
+ /* ── 审查修补 ───────────────────────────────────────── */
+ /* Mermaid 源码视图：宿主写死 #fafafa，对齐代码块玻璃 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat .mermaid-source {
+   background: rgba(255, 255, 255, 0.78);
+   box-shadow: inset 0 0 0 1px rgba(29, 122, 104, 0.1);
+ }
+ 
+ /* 聊天报错横幅：实色改玻璃，浮在壁纸上不再突兀 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .chat-error-notice {
+   background: color-mix(in oklab, var(--ds-bg-secondary) 88%, transparent);
+   -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(8px);
+ }
+ 
+ /* 设置页导航：去掉按导航宽度裁切的壁纸副本，让全屏壁纸直接透出（避免裁切错位） */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .settings-nav.sidebar-surface {
+   background-color: transparent;
+   background-image: none;
+ }
+ 
+ /* ── 过程输出轻量化：透明行 + 青绿文字 + 发丝下划线 ── */
+ /* 行底完全放行壁纸，只靠文字颜色和一道细线做层级 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-header,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-activity-header {
+   background: none;
+   -webkit-backdrop-filter: none;
+   backdrop-filter: none;
+   box-shadow: inset 0 -1px 0 rgba(11, 128, 116, 0.26);
+   border-radius: 0;
+   padding-bottom: 3px;
+ }
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-header:hover,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-activity-header:hover {
+   background: color-mix(in oklab, #0f9d8e 7%, transparent);
+   border-radius: var(--radius-sm);
+ }
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-name,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-activity-label {
+   color: #06756a;
+ }
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-header:hover .tool-row-name,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-activity-header:hover .tool-activity-label {
+   color: #045c53;
+ }
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-icon,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-activity-icon {
+   color: color-mix(in oklab, #0b8074 78%, transparent);
+ }
+ /* 运行状态行：文字染青绿，无底 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .working-indicator {
+   background: none;
+   -webkit-backdrop-filter: none;
+   backdrop-filter: none;
+   box-shadow: none;
+   color: #06756a;
+ }
+ /* 子代理卡：只留发丝描边，不加底 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .subagent-topology-node {
+   background: color-mix(in oklab, #f3faf7 34%, transparent);
+   -webkit-backdrop-filter: none;
+   backdrop-filter: none;
+   box-shadow: inset 0 0 0 1px rgba(11, 128, 116, 0.2);
+ }
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .subagent-run {
+   background: color-mix(in oklab, #f3faf7 28%, transparent);
+   box-shadow: inset 0 0 0 1px rgba(11, 128, 116, 0.15);
+ }
+ 
+ /* 工具行里的文件路径 / 参数摘要：染淡一档的青绿，保持标签亮、路径暗的层次 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-summary,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-activity-preview {
+   color: #4d8c82;
+ }
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-row-header:hover .tool-row-summary,
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .tool-activity-header:hover .tool-activity-preview {
+   color: #3d7a70;
+ }
+ 
+ /* ── 右边栏工作面板适配 ─────────────────────────────── */
+ /* 文件查看器的 Shiki 代码底色是内联样式（One Dark/One Light），
+    必须 !important 覆盖成玻璃底；语法 token 色保持宿主自带 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .file-viewer pre.shiki {
+   background: rgba(255, 255, 255, 0.82) !important;
+   box-shadow: inset 0 0 0 1px rgba(29, 122, 104, 0.08);
+ }
+ 
+ /* 行内代码片：灰白药丸改青色系——青绿淡底 + 深青文字 */
+ :root[data-plugin-theme="plugin:local.miku-theme:snow-miku"] .prose-chat code {
+   background: color-mix(in oklab, #0f9d8e 9%, transparent);
+   color: #056558;
+ }

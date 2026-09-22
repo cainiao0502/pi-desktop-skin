@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "local.skin",
+  "name": "Skin",
+  "version": "0.1.0",
+  "description": "Skin — generated from the panel-basic template.",
+  "main": "main.js",
+  "ui": {
+    "panel": "renderer/index.html",
+    "title": "Skin"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "skin.open",
+        "title": "Skin: Open Panel",
+        "keywords": [
+          "skin"
+        ]
+      }
+    ]
+  },
+  "permissions": [
+    "ui.panel"
+  ],
+  "engines": {
+    "piDesktop": ">=0.1.0"
+  },
+  "activationEvents": [
+    "onCommand:skin.open",
+    "onStartup"
+  ]
+}
