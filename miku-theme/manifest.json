@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "local.miku-theme",
   "name": "Miku Theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "初音未来双主题：Cyber Diva（暗 · 深夜蓝 × 霓虹 Teal）与 Snow Miku（亮 · 雪白 × 冰蓝）。低调克制，覆盖全部界面 token。",
   "main": "main.js",
   "ui": {
@@ -15,15 +15,13 @@
         "id": "cyber-diva",
         "label": "Cyber Diva（初音 · 暗）",
         "path": "themes/cyber-diva.css",
-        "base": "dark",
-         "assets": ["themes/assets/wallpaper-dark.webp"]
+        "base": "dark"
       },
       {
         "id": "snow-miku",
         "label": "Snow Miku（初音 · 亮）",
         "path": "themes/snow-miku.css",
-        "base": "light",
-         "assets": ["themes/assets/wallpaper-light.webp"]
+        "base": "light"
       }
     ],
     "windowAppearance": {
